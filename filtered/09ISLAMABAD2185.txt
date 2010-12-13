@@ -3,7 +3,6 @@
 2010-11-30 21:09
 SECRET//NOFORN
 Embassy Islamabad
-http://www.nytimes.com
 
 INFO  LOG-00   MFA-00   EEB-00   AID-00   AMAD-00  A-00     ACQ-00   
       INL-00   DOEE-00  DOTE-00  DS-00    DHSE-00  EUR-00   OIGO-00  
