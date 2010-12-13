@@ -16,6 +16,10 @@ $(document).ready(function() {
 		load($("#cable").val());
 	});
 	
+	$("#header a").click(function() {
+		load("");
+	});
+	
 	setInterval(function() {
 		var cable = document.location.hash.substring(1);
 		if (cable != hash) {
@@ -253,7 +257,7 @@ img {
 	margin-bottom: 5px;
 }
 
-.tagLink, .tagsSublist, .tagli {
+.tagLink, .tagsSublist, .tagli, #header a {
 	text-decoration: underline;
 	cursor: pointer;
 }
@@ -281,7 +285,7 @@ img {
 <body>
 	<div id="wrapper">
 		<div id="header">
-			<a href="#" ><img src="leak.png" /></a>
+			<a><img src="leak.png" /></a>
 			<div id="search">
 				<form id="gotoCable">
 					<input type="text" id="cable" placeholder="Search" />
