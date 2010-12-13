@@ -1,0 +1,85 @@
+body {
+	font-size: 12px;
+}
+
+#wrapper {
+	width: 900px; 
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+#content {
+	float: left;
+	width: 600px;
+}
+
+#content .cell {
+	width: 280px;
+	margin-right: 20px;
+	float: left;
+}
+
+#content img {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+img {
+	border: 0;
+}
+
+.left {
+	float: right;
+	width: 240px;
+	display: none;
+}
+
+.tagsSublist {
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+.left > div {
+	margin-bottom: 15px;
+}
+
+.tag {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.tagLink, .tagsSublist, .tagli, #header a {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#header {
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+#header a {
+	float: left;
+}
+
+#search {
+	margin-top: 15px;
+	float: right;
+}
+
+.tagli {
+	margin-bottom: 5px;
+}
+
+#footer {
+	width: 900px;
+	margin:  10px auto;
+	text-align: right;
+}
+
+#footer a {
+	color: black;
+}
