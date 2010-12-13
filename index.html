@@ -7,6 +7,7 @@ var hash = "";
 
 $(document).ready(function() {
 	var cable = document.location.hash.substring(1);
+	hash = cable;
 	
 	load(cable);
 	
@@ -45,7 +46,7 @@ function loadTags(tag) {
 
 	initTags(function(data) {
 		for (var i in data) {
-			if ((!tag && data[i].len > 2) || (tag.length > 0 && data[i].tag.match(re))) {
+			if ((!tag && data[i].len > 10) || (tag.length > 0 && data[i].tag.match(re))) {
 				var tagObjWrap = $("<div></div>");
 				var tagli = $("<div class='tagli'><span>"+data[i].tag + "</span> (" + data[i].len +")</div>");
 				tagObjWrap.append(tagli);
