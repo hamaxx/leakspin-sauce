@@ -20,7 +20,6 @@ $(document).ready(function() {
 	setInterval(function() {
 		var cable = document.location.hash.substring(1);
 		if (cable != hash) {
-			hash = cable;
 			load(cable);
 		}
 	}, 50);
@@ -28,7 +27,8 @@ $(document).ready(function() {
 
 function load(cable) {
 	$("#cable").val(cable);
-	document.location.hash = $("#cable").val();
+	document.location.hash = cable;
+	hash = cable;
 	
 	if (cable.length > 0 && cable.match(/[0-9]{2}[A-Z]+[0-9]+/)) {
 		$(".left").css("display", "block");
