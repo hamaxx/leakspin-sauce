@@ -1,0 +1,1 @@
+[{"confidence": 1.034694, "cable": "10WARSAW94"}, {"confidence": 0.89499299999999993, "cable": "09WARSAW467"}, {"confidence": 0.89261800000000013, "cable": "09WARSAW170"}, {"confidence": 0.879996, "cable": "09WARSAW876"}, {"confidence": 0.84687699999999999, "cable": "09STATE127892"}, {"confidence": 0.62402099999999994, "cable": "09USNATO588"}]

@@ -1,0 +1,1 @@
+[{"confidence": 0.18379400000000001, "cable": "10RPODUBAI13"}, {"confidence": 0.136013, "cable": "09RPODUBAI235"}, {"confidence": 0.13320100000000001, "cable": "09RPODUBAI177"}, {"confidence": 0.079352000000000006, "cable": "09RPODUBAI379"}, {"confidence": 0.073353000000000002, "cable": "09ASHGABAT757"}, {"confidence": 0.023952999999999999, "cable": "09RPODUBAI389"}]

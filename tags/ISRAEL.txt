@@ -1,0 +1,1 @@
+[{"confidence": 0.20120199999999999, "cable": "07TELAVIV64"}]

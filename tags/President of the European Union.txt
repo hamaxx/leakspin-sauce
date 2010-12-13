@@ -1,0 +1,1 @@
+[{"confidence": 0.108805, "cable": "10BRUSSELS4"}]
