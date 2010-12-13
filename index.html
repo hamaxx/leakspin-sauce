@@ -1,9 +1,11 @@
 <base target="_blank" />
+<title>leakspin: sauce - home</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
 <script type="text/javascript">
 
 var tagsCache;
 var hash = "";
+var title = "leakspin: sauce - ";
 
 $(document).ready(function() {
 	var cable = document.location.hash.substring(1);
@@ -41,6 +43,12 @@ function load(cable) {
 		$(".left").css("display", "none");
 		$("#content").css("width", "900px");
 		loadTags(cable);
+	}
+	
+	if (cable.length <= 0) {
+		$("title").html(title + "home");
+	} else {
+		$("title").html(title + cable);
 	}
 }
 
@@ -210,7 +218,7 @@ body {
 
 #wrapper {
 	width: 900px; 
-	margin: 20px auto;
+	margin: 20px auto 0 auto;
 	padding: 10px;
 	border: 1px solid #ccc;
 	overflow: hidden;
@@ -280,12 +288,22 @@ img {
 	margin-bottom: 5px;
 }
 
+#footer {
+	width: 900px;
+	margin:  10px auto;
+	text-align: right;
+}
+
+#footer a {
+	color: black;
+}
+
 </style>
 
 <body>
 	<div id="wrapper">
 		<div id="header">
-			<a><img src="leak.png" /></a>
+			<a><img src="leak.png" alt="leakspin sauce" /></a>
 			<div id="search">
 				<form id="gotoCable">
 					<input type="text" id="cable" placeholder="Search" />
@@ -308,5 +326,8 @@ img {
 				<div id="articles"></div>
 			</div>
 		</div>
+	</div>
+	<div id="footer">
+		<a href="http://operationleakspin.org/"><img src="leak_o.png" alt="operation leakspin"></a>
 	</div>
 </body>
