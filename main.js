@@ -127,10 +127,10 @@ function relatedCables(cable) {
 		for (var i in data) {
 			if (i > 15) break;
 			
-			var link = $("<div class=\"tag tagLink\">" + data[i].cable + "</div>");
+			var link = $("<div class=\"tag tagLink\" cable=\""+data[i].cable+"\">" + humanCable(data[i].cable) + "</div>");
 			$("#relatedCables").append(link);
 			link.click(function() {
-				load($(this).html());
+				load($(this).attr("cable"));
 			});
 		}
 	});
@@ -162,10 +162,10 @@ function articlesForTag(obj) {
 		for (var i in data) {
 			if ($("#cable").val() != data[i].cable) {
 			
-				var link = $("<div>" + data[i].cable + "</div>");
+				var link = $("<div cable=\""+data[i].cable+"\">" + humanCable(data[i].cable) + "</div>");
 				links.append(link);
 				link.click(function() {
-					load($(this).html());
+					load($(this).attr("cable"));
 				});
 			}
 		}
@@ -219,4 +219,9 @@ function markup(data, text) {
 	
 	text = text.replace(/\n/g, "<br / >");
 	$("#content").html(text);
+}
+
+function humanCable(cable) {
+	var p = cable.match(/([0-9]{2})([A-Z]+)([0-9]+)/);
+	return "20" + p[1] + ": " + p[2].substring(0, 1) + p[2].toLowerCase().substring(1) + " " + p[3];
 }
