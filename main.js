@@ -101,10 +101,39 @@ function loadCable(cable) {
 	$("#articles").html("");
 	$("#tags").html("");
 	
-	$.get("filtered/" + cable + ".txt", function(data) {		
+	$.get("filtered/" + cable + ".txt", function(data) {	
+		data = filterMeta(data);	
 		zemify(cable, data);
 	});
 	relatedCables(cable);
+}
+
+function filterMeta(data) {
+	var brake = data.search(new RegExp("introduction", "i"));
+	if (brake < 0) brake = data.search(new RegExp("Summary", "i"));
+	if (brake < 0) brake = data.search(new RegExp("1\\. \\( ", "i"));
+	if (brake < 0) brake = data.search(new RegExp("Classified By", "i"));
+	
+	var meta = data.substring(0, brake);
+	var body = data.substring(brake);
+	
+	var metaHead = "<a id=\"metaHead\" href=\"#expand_meta\">Expand Meta Data</a>";
+	var metaBodyWrap = "<div id=\"metaBody\">" + meta + "</div>";
+	
+	var subject = "";
+	var subjectFrom = meta.search(new RegExp("subject", "i"));
+	var subjectTo = -1;
+	if (subjectFrom > 0) {
+		subjectFrom = meta.indexOf(" ", subjectFrom);
+		if (subjectFrom > 0) {
+			subjectTo = meta.indexOf("\n", subjectFrom);
+			if (subjectTo > 0) {
+				subject = "<h2>" + meta.substring(subjectFrom, subjectTo) + "</h2>";
+			}
+		}
+	}
+	
+	return subject + metaHead + metaBodyWrap + body + "\n\n";
 }
 
 function zemify(cable, text) {
@@ -213,11 +242,23 @@ function markup(data, text) {
 				}
 			}
 		}
-		text = text.replace(anchor, "<a target=\"_blank\" href=\"" + target.url + "\" title=\""+target.title+"\">" + anchor + "</a>");
+		var reg = new RegExp(anchor, "g");
+		text = text.replace(reg, "<a target=\"_blank\" href=\"" + target.url + "\" title=\""+target.title+"\">" + anchor + "</a>");
 	}
 	
 	text = text.replace(/\n/g, "<br / >");
 	$("#content").html(text);
+	
+	$("#metaHead").click(function() {
+		if ($("#metaBody").css("display") == "none") {
+			$("#metaBody").css("display", "block");
+			$("#metaHead").html("Hide Meta Data");
+		} else {
+			$("#metaBody").css("display", "none");
+			$("#metaHead").html("Expand Meta Data");
+		}
+		return false;
+	});
 }
 
 function humanCable(cable) {

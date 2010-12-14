@@ -39,6 +39,21 @@ img {
 	border: 0;
 }
 
+#metaBody {
+	display: none;
+}
+
+#metaHead {
+	display: block;
+	color: #333;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	text-decoration: none;
+	width: 150px;
+	text-align: center;
+}
+
 .left {
 	float: right;
 	width: 240px;
