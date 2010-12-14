@@ -30,6 +30,7 @@ function load(cable) {
 		$("#content").css("width", "600px");
 		loadCable(cable);
 	} else {
+		alert("tags: " + hash + " " + cable);
 		$(".left").css("display", "none");
 		$("#content").css("width", "900px");
 		loadTags(cable);

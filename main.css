@@ -115,7 +115,7 @@ iframe {
 }
 
 .zemanta {
-	clear: left;
+	clear: both;
 }
 
 .zemanta-pixie-a {
