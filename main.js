@@ -16,6 +16,14 @@ $(document).ready(function() {
 	$("#header a").click(function() {
 		load("");
 	});
+	
+	$.ajaxSetup({
+		error:function(e, x){
+			$("#content").html("<h2 id=\"error\">Sorry, no content to display.</h2>");
+			$("#content").css("width", "900px");
+			$(".left").css("display", "none");
+		}
+	});
 });
 
 function load(cable) {
@@ -30,7 +38,6 @@ function load(cable) {
 		$("#content").css("width", "600px");
 		loadCable(cable);
 	} else {
-		alert("tags: " + hash + " " + cable);
 		$(".left").css("display", "none");
 		$("#content").css("width", "900px");
 		loadTags(cable);
@@ -54,6 +61,10 @@ function loadTags(tag) {
 			if ((!tag && data[i].len > 10) || (tag.length > 0 && data[i].tag.match(re))) {
 				alltags.push(data[i]);
 			}
+		}
+		
+		if (alltags.length == 0) {
+			$("#content").html("<h2 id=\"error\">Sorry, no content to display.</h2>");
 		}
 		
 		var c = 0;
@@ -102,7 +113,7 @@ function loadCable(cable) {
 	$("#articles").html("");
 	$("#tags").html("");
 	
-	$.get("filtered/" + cable + ".txt", function(data) {	
+	$.get("filtered/" + cable + ".txt", function(data) {
 		data = filterMeta(data);	
 		zemify(cable, data);
 	});
@@ -222,9 +233,11 @@ function image(data) {
 	}
 	
 	if (image != undefined) {
-		$("#content").prepend(
-			'<a target="_blank" href="'+image.url_l+'"><img src="'+image.url_m+'" alt="'+image.description+'" title="'+image.description+'" / ></a>'
-		);
+		var img = $('<img src="'+image.url_m+'" alt="'+image.description+'" title="'+image.description+'" / >');
+		$("#content").prepend($('<a target="_blank" href="'+image.url_l+'"></a>').append(img));
+		img.error(function(e, x) {
+			$(this).remove();
+		});
 	}
 }
 

@@ -1,5 +1,6 @@
 body {
 	font-size: 12px;
+	font-family: Helvetica, Arial;
 }
 
 a {
@@ -120,4 +121,8 @@ iframe {
 
 .zemanta-pixie-a {
 	float: right;
+}
+
+#error {
+	text-align: center;
 }
