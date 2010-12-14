@@ -111,7 +111,7 @@ function loadCable(cable) {
 function filterMeta(data) {
 	var brake = data.search(new RegExp("introduction", "i"));
 	if (brake < 0) brake = data.search(new RegExp("Summary", "i"));
-	if (brake < 0) brake = data.search(new RegExp("1\\. \\( ", "i"));
+	if (brake < 0) brake = data.search(new RegExp("1\\. \\(", "i"));
 	if (brake < 0) brake = data.search(new RegExp("Classified By", "i"));
 	
 	var meta = data.substring(0, brake);
