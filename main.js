@@ -198,17 +198,24 @@ function articlesForTag(obj) {
 	$.get("tags/" + fn + ".txt", function(data) {
 		data = JSON.parse(data);
 		var links = $("<div class=\"tagsSublist\"></div>");
+		var allData = [];
 		for (var i in data) {
 			if ($("#cable").val() != data[i].cable) {
-			
-				var link = $("<a href=\"#!" + data[i].cable + "\" cable=\""+data[i].cable+"\">" + humanCable(data[i].cable) + "</a>");
-				links.append(link);
-				link.click(function() {
-					load($(this).attr("cable"));
-					return false;
-				});
+				allData[i] = [humanCable(data[i].cable), data[i].cable];
 			}
 		}
+		
+		allData.sort(function(a, b) {return a[0] < b[0]});
+		
+		for (var i in allData) {
+			var link = $("<a href=\"#!" + allData[i][1] + "\" cable=\""+ allData[i][1] +"\">" + allData[i][0] + "</a>");
+			links.append(link);
+			link.click(function() {
+				load($(this).attr("cable"));
+				return false;
+			});		
+		}
+		
 		obj.parent().append(links);
 	});
 }
@@ -277,5 +284,5 @@ function markup(data, text) {
 
 function humanCable(cable) {
 	var p = cable.match(/([0-9]{2})([A-Z]+)([0-9]+)/);
-	return "20" + p[1] + ": " + p[2].substring(0, 1) + p[2].toLowerCase().substring(1) + " " + p[3];
+	return (parseInt(p[1]) < 50 ? "20" : 19) + p[1] + ": " + p[2].substring(0, 1) + p[2].toLowerCase().substring(1) + " " + p[3];
 }
