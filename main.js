@@ -1,12 +1,12 @@
 var tagsCache;
-var hash = "";
+var hash = "empty";
 var title = "leakspin: sauce - ";
 
 $(document).ready(function() {
-	var cable = document.location.hash.substring(1);
-	hash = cable;
-	
-	load(cable);
+	setInterval(function() {
+		var cable = document.location.hash.substring(2);
+		load(cable);
+	}, 50);
 	
 	$("#gotoCable").submit(function(e) {
 		e.preventDefault();
@@ -16,18 +16,13 @@ $(document).ready(function() {
 	$("#header a").click(function() {
 		load("");
 	});
-	
-	setInterval(function() {
-		var cable = document.location.hash.substring(1);
-		if (cable != hash) {
-			load(cable);
-		}
-	}, 50);
 });
 
 function load(cable) {
+	if (hash == cable) return;
+	
 	$("#cable").val(cable);
-	document.location.hash = cable;
+	document.location.hash = "!" + cable;
 	hash = cable;
 	
 	if (cable.length > 0 && cable.match(/[0-9]{2}[A-Z]+[0-9]+/)) {
@@ -64,7 +59,7 @@ function loadTags(tag) {
 		var columnSize = alltags.length / 3;
 		for (var i in alltags) {
 			var tagObjWrap = $("<div></div>");
-			var tagli = $("<div class='tagli'><span>"+alltags[i].tag + "</span> (" + alltags[i].len +")</div>");
+			var tagli = $("<a href=\"#!" + alltags[i].tag + "\" class='tagli'><span>"+alltags[i].tag + "</span> (" + alltags[i].len +")</a>");
 			tagObjWrap.append(tagli);
 			
 			
@@ -77,6 +72,7 @@ function loadTags(tag) {
 				} else {
 					articlesForTag($(this));
 				}
+				return false;
 			});
 			if (tagObjWrap.height() > 20) {
 				c++;
@@ -105,10 +101,39 @@ function loadCable(cable) {
 	$("#articles").html("");
 	$("#tags").html("");
 	
-	$.get("filtered/" + cable + ".txt", function(data) {		
+	$.get("filtered/" + cable + ".txt", function(data) {	
+		data = filterMeta(data);	
 		zemify(cable, data);
 	});
 	relatedCables(cable);
+}
+
+function filterMeta(data) {
+	var brake = data.search(new RegExp("introduction", "i"));
+	if (brake < 0) brake = data.search(new RegExp("Summary", "i"));
+	if (brake < 0) brake = data.search(new RegExp("1\\. \\(", "i"));
+	if (brake < 0) brake = data.search(new RegExp("Classified By", "i"));
+	
+	var meta = data.substring(0, brake);
+	var body = data.substring(brake);
+	
+	var metaHead = "<a id=\"metaHead\" href=\"#expand_meta\">Expand Meta Data</a>";
+	var metaBodyWrap = "<div id=\"metaBody\">" + meta + "</div>";
+	
+	var subject = "";
+	var subjectFrom = meta.search(new RegExp("subject", "i"));
+	var subjectTo = -1;
+	if (subjectFrom > 0) {
+		subjectFrom = meta.indexOf(" ", subjectFrom);
+		if (subjectFrom > 0) {
+			subjectTo = meta.indexOf("\n", subjectFrom);
+			if (subjectTo > 0) {
+				subject = "<h2>" + meta.substring(subjectFrom, subjectTo) + "</h2>";
+			}
+		}
+	}
+	
+	return subject + metaHead + metaBodyWrap + body + "\n\n";
 }
 
 function zemify(cable, text) {
@@ -127,10 +152,11 @@ function relatedCables(cable) {
 		for (var i in data) {
 			if (i > 15) break;
 			
-			var link = $("<div class=\"tag tagLink\" cable=\""+data[i].cable+"\">" + humanCable(data[i].cable) + "</div>");
+			var link = $("<a href=\"#!" + data[i].cable + "\" class=\"tag tagLink\" cable=\""+data[i].cable+"\">" + humanCable(data[i].cable) + "</a>");
 			$("#relatedCables").append(link);
 			link.click(function() {
 				load($(this).attr("cable"));
+				return false;
 			});
 		}
 	});
@@ -140,7 +166,7 @@ function tags(data) {
 	var tags = data.keywords;
 	for (var i in tags) {
 		var tagObjWrap = $("<div></div>");
-		var tagObj = $("<div class=\"tag tagLink\"><span>" + tags[i].name + "</span></div>");
+		var tagObj = $("<a href=\"#!" + tags[i].name + "\"  class=\"tag tagLink\"><span>" + tags[i].name + "</span></a>");
 		tagObjWrap.append(tagObj);
 		$("#tags").append(tagObjWrap);
 		
@@ -150,6 +176,7 @@ function tags(data) {
 			} else {
 				articlesForTag($(this));
 			}
+			return false;
 		});
 	}
 }
@@ -162,10 +189,11 @@ function articlesForTag(obj) {
 		for (var i in data) {
 			if ($("#cable").val() != data[i].cable) {
 			
-				var link = $("<div cable=\""+data[i].cable+"\">" + humanCable(data[i].cable) + "</div>");
+				var link = $("<a href=\"#!" + data[i].cable + "\" cable=\""+data[i].cable+"\">" + humanCable(data[i].cable) + "</a>");
 				links.append(link);
 				link.click(function() {
 					load($(this).attr("cable"));
+					return false;
 				});
 			}
 		}
@@ -176,7 +204,7 @@ function articlesForTag(obj) {
 function articles(data) {
 	var articles = data.articles;
 	for (var i in articles) {
-		$("#articles").append("<a href=\"" + articles[i].url + "\" class=\"tag\">" + articles[i].title + "</a>");
+		$("#articles").append("<a target=\"blank_\" href=\"" + articles[i].url + "\" class=\"tag\">" + articles[i].title + "</a>");
 	}
 }
 
@@ -194,7 +222,7 @@ function image(data) {
 	
 	if (image != undefined) {
 		$("#content").prepend(
-			'<a href="'+image.url_l+'"><img src="'+image.url_m+'" alt="'+image.description+'" title="'+image.description+'" / ></a>'
+			'<a target="_blank" href="'+image.url_l+'"><img src="'+image.url_m+'" alt="'+image.description+'" title="'+image.description+'" / ></a>'
 		);
 	}
 }
@@ -214,11 +242,23 @@ function markup(data, text) {
 				}
 			}
 		}
-		text = text.replace(anchor, "<a href=\"" + target.url + "\" title=\""+target.title+"\">" + anchor + "</a>");
+		var reg = new RegExp(anchor, "g");
+		text = text.replace(reg, "<a target=\"_blank\" href=\"" + target.url + "\" title=\""+target.title+"\">" + anchor + "</a>");
 	}
 	
 	text = text.replace(/\n/g, "<br / >");
 	$("#content").html(text);
+	
+	$("#metaHead").click(function() {
+		if ($("#metaBody").css("display") == "none") {
+			$("#metaBody").css("display", "block");
+			$("#metaHead").html("Hide Meta Data");
+		} else {
+			$("#metaBody").css("display", "none");
+			$("#metaHead").html("Expand Meta Data");
+		}
+		return false;
+	});
 }
 
 function humanCable(cable) {

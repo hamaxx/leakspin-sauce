@@ -2,6 +2,14 @@ body {
 	font-size: 12px;
 }
 
+a {
+	color: #337733;
+}
+
+a:visited {
+	color: #666;
+}
+
 #wrapper {
 	width: 900px; 
 	margin: 20px auto 0 auto;
@@ -31,6 +39,21 @@ img {
 	border: 0;
 }
 
+#metaBody {
+	display: none;
+}
+
+#metaHead {
+	display: block;
+	color: #333;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	text-decoration: none;
+	width: 150px;
+	text-align: center;
+}
+
 .left {
 	float: right;
 	width: 240px;
@@ -42,6 +65,10 @@ img {
 	margin-bottom: 10px;
 }
 
+.tagsSublist a {
+	display: block;
+}
+
 .left > div {
 	margin-bottom: 15px;
 }
@@ -49,11 +76,6 @@ img {
 .tag {
 	display: block;
 	margin-bottom: 5px;
-}
-
-.tagLink, .tagsSublist, .tagli, #header a {
-	text-decoration: underline;
-	cursor: pointer;
 }
 
 #header {
