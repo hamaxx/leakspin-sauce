@@ -1,1 +1,1 @@
-[{"confidence": 0.063431000000000001, "cable": "10BELGRADE3"}, {"confidence": 0.062643000000000004, "cable": "10BELGRADE19"}]
+[{"confidence": 0.092272999999999994, "cable": "04VATICAN3196"}, {"confidence": 0.087516999999999998, "cable": "06VATICAN256"}, {"confidence": 0.063431000000000001, "cable": "10BELGRADE3"}, {"confidence": 0.062643000000000004, "cable": "10BELGRADE19"}]

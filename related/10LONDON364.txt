@@ -1,1 +1,1 @@
-[{"confidence": 1.1463749999999999, "cable": "08LONDON2556"}, {"confidence": 1.0780560000000001, "cable": "08LONDON930"}, {"confidence": 0.92335599999999995, "cable": "09LONDON860"}, {"confidence": 0.88125399999999998, "cable": "08LONDON2765"}, {"confidence": 0.73307800000000001, "cable": "09LONDON2768"}, {"confidence": 0.624973, "cable": "08LONDON929"}, {"confidence": 0.61148199999999997, "cable": "09LONDON604"}]
+[{"confidence": 1.1463749999999999, "cable": "08LONDON2556"}, {"confidence": 1.0780560000000001, "cable": "08LONDON930"}]

@@ -77,9 +77,25 @@ img {
 #footer {
 	width: 900px;
 	margin:  10px auto;
-	text-align: right;
 }
 
 #footer a {
 	color: black;
+}
+
+iframe {
+	float: left;
+	height: 35px;
+}
+
+#footer .leakspin {
+	float: right;
+}
+
+.zemanta {
+	clear: left;
+}
+
+.zemanta-pixie-a {
+	float: right;
 }

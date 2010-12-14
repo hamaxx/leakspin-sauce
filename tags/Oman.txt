@@ -1,1 +1,1 @@
-[{"confidence": 0.23877599999999999, "cable": "10MUSCAT71"}, {"confidence": 0.223771, "cable": "08MUSCAT174"}, {"confidence": 0.166466, "cable": "08MUSCAT565"}, {"confidence": 0.062053999999999998, "cable": "09TELAVIV654"}]
+[{"confidence": 0.25259399999999999, "cable": "07MUSCAT359"}, {"confidence": 0.23877599999999999, "cable": "10MUSCAT71"}, {"confidence": 0.223771, "cable": "08MUSCAT174"}, {"confidence": 0.166466, "cable": "08MUSCAT565"}, {"confidence": 0.062053999999999998, "cable": "09TELAVIV654"}]

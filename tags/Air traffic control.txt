@@ -1,0 +1,1 @@
+[{"confidence": 0.22763700000000001, "cable": "08BRASILIA806"}, {"confidence": 0.180475, "cable": "06BRASILIA2002"}, {"confidence": 0.085759000000000002, "cable": "09BRASILIA390"}, {"confidence": 0.062937000000000007, "cable": "08BRASILIA987"}]

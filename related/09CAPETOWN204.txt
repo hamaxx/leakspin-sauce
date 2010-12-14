@@ -1,1 +1,1 @@
-[{"confidence": 1.304735, "cable": "09PRETORIA939"}, {"confidence": 0.99224699999999988, "cable": "90CAPETOWN97"}, {"confidence": 0.98507199999999995, "cable": "09PRETORIA2263"}, {"confidence": 0.94278300000000004, "cable": "09PRETORIA954"}, {"confidence": 0.79024800000000006, "cable": "07PRETORIA1712"}, {"confidence": 0.68347899999999995, "cable": "08MOSCOW2700"}, {"confidence": 0.66554500000000005, "cable": "01PRETORIA1173"}]
+[{"confidence": 1.304735, "cable": "09PRETORIA939"}]
