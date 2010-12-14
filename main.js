@@ -114,13 +114,13 @@ function loadCable(cable) {
 	$("#tags").html("");
 	
 	$.get("filtered/" + cable + ".txt", function(data) {
-		data = filterMeta(data);	
+		data = filterMeta(data, cable);	
 		zemify(cable, data);
 	});
 	relatedCables(cable);
 }
 
-function filterMeta(data) {
+function filterMeta(data, cable) {
 	var brake = data.search(new RegExp("introduction", "i"));
 	if (brake < 0) brake = data.search(new RegExp("Summary", "i"));
 	if (brake < 0) brake = data.search(new RegExp("1\\. \\(", "i"));
@@ -145,7 +145,9 @@ function filterMeta(data) {
 		}
 	}
 	
-	return subject + metaHead + metaBodyWrap + body + "\n\n";
+	var sourceLink = "";//"<a href=\"http://wikileaks.ch/cable/2005/11/" + cable + ".html\">Original source</a>";
+	
+	return subject + metaHead + metaBodyWrap + body + sourceLink + "\n";
 }
 
 function zemify(cable, text) {
