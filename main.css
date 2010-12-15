@@ -31,8 +31,8 @@ a:visited {
 }
 
 #content img {
-	float: right;
-	margin-left: 20px;
+	float: left;
+	margin-right: 20px;
 	margin-bottom: 20px;
 }
 
@@ -42,6 +42,7 @@ img {
 
 #metaBody {
 	display: none;
+	clear: both;
 }
 
 #metaHead {
@@ -51,8 +52,10 @@ img {
 	margin-bottom: 10px;
 	padding: 5px 10px;
 	text-decoration: none;
-	width: 150px;
+	//width: 150px;
 	text-align: center;
+	float: left;
+	clear: right;
 }
 
 .left {

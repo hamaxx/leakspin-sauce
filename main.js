@@ -122,15 +122,15 @@ function loadCable(cable) {
 
 function filterMeta(data, cable) {
 	var brake = data.search(new RegExp("introduction", "i"));
-	if (brake < 0) brake = data.search(new RegExp("Summary", "i"));
 	if (brake < 0) brake = data.search(new RegExp("1\\. \\(", "i"));
+	if (brake < 0) brake = data.search(new RegExp("Summary", "i"));
 	if (brake < 0) brake = data.search(new RegExp("Classified By", "i"));
 	
 	var meta = data.substring(0, brake);
 	var body = data.substring(brake);
 	
-	var metaHead = "<a id=\"metaHead\" href=\"#expand_meta\">Expand Meta Data</a>";
-	var metaBodyWrap = "<div id=\"metaBody\">" + meta + "</div>";
+	var metaHead = "<div style=\"overflow: hidden;\"><a id=\"metaHead\" href=\"#expand_meta\">Expand Meta Data</a><div id=\"metaBody\">" + meta + "</div></div>";
+	//var metaBodyWrap = "<div id=\"metaBody\">" + meta + "</div>";
 	
 	var subject = "";
 	var subjectFrom = meta.search(new RegExp("subject", "i"));
@@ -139,22 +139,24 @@ function filterMeta(data, cable) {
 		subjectFrom = meta.indexOf(" ", subjectFrom);
 		if (subjectFrom > 0) {
 			subjectTo = meta.indexOf("\n", subjectFrom);
+			subjectTo = meta.indexOf("\n", subjectTo + 1);
 			if (subjectTo > 0) {
 				subject = "<h2>" + meta.substring(subjectFrom, subjectTo) + "</h2>";
 			}
 		}
 	}
 	
-	var sourceLink = "";//"<a href=\"http://wikileaks.ch/cable/2005/11/" + cable + ".html\">Original source</a>";
+	$("#content").html(subject);
+	$("#content").append(metaHead.replace(/\n/g, "<br / >"));
 	
-	return subject + metaHead + metaBodyWrap + body + sourceLink + "\n";
+	return body + "\n";
 }
 
 function zemify(cable, text) {
 	$.get("zemanta/" + cable + ".txt", function(data) {
 		data = JSON.parse(data);
-		markup(data, text);
 		image(data);
+		markup(data, text);
 		tags(data);
 		articles(data);
 	});
@@ -207,7 +209,7 @@ function articlesForTag(obj) {
 			}
 		}
 		
-		allData.sort(function(a, b) {return a[0] < b[0]});
+		allData.sort(function(a, b) {return a[0] > b[0] ? -1 : 1});
 		
 		for (var i in allData) {
 			var link = $("<a href=\"#!" + allData[i][1] + "\" cable=\""+ allData[i][1] +"\">" + allData[i][0] + "</a>");
@@ -243,7 +245,7 @@ function image(data) {
 	
 	if (image != undefined) {
 		var img = $('<img src="'+image.url_m+'" alt="'+image.description+'" title="'+image.description+'" / >');
-		$("#content").prepend($('<a target="_blank" href="'+image.url_l+'"></a>').append(img));
+		$("#content").append($('<a target="_blank" href="'+image.url_l+'"></a>').append(img));
 		img.error(function(e, x) {
 			$(this).remove();
 		});
@@ -265,12 +267,13 @@ function markup(data, text) {
 				}
 			}
 		}
-		var reg = new RegExp(anchor, "g");
+		var reg = new RegExp(anchor);
 		text = text.replace(reg, "<a target=\"_blank\" href=\"" + target.url + "\" title=\""+target.title+"\">" + anchor + "</a>");
 	}
-	
-	text = text.replace(/\n/g, "<br / >");
-	$("#content").html(text);
+	//text = text.replace(/\n(.*?)-{5,}/gm, "<br /><br />$1");
+	//text = text.replace(/\n([0-9]+\.)/g, "<br /><br />$1");
+	text = text.replace(/\n/g, "<br />");
+	$("#content").append(text);
 	
 	$("#metaHead").click(function() {
 		if ($("#metaBody").css("display") == "none") {
