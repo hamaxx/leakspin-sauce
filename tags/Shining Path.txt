@@ -1,0 +1,1 @@
+[{"confidence": 0.113743, "cable": "06LIMA622"}, {"confidence": 0.105962, "cable": "09LIMA1620"}, {"confidence": 0.089367000000000002, "cable": "08LIMA196"}, {"confidence": 0.071651999999999993, "cable": "07LIMA3764"}, {"confidence": 0.064425999999999997, "cable": "09LIMA345"}, {"confidence": 0.063818, "cable": "09LIMA1309"}, {"confidence": 0.058427, "cable": "09LIMA1659"}]

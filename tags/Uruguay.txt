@@ -1,0 +1,1 @@
+[{"confidence": 0.20724400000000001, "cable": "06MONTEVIDEO963"}, {"confidence": 0.199346, "cable": "07MONTEVIDEO287"}, {"confidence": 0.154611, "cable": "09MONTEVIDEO298"}, {"confidence": 0.14391000000000001, "cable": "06MONTEVIDEO1179"}, {"confidence": 0.133493, "cable": "08MONTEVIDEO197"}, {"confidence": 0.063669000000000003, "cable": "08MONTEVIDEO314"}]

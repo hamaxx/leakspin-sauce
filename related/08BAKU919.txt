@@ -1,0 +1,1 @@
+[{"confidence": 1.2878420000000002, "cable": "07BAKU522"}, {"confidence": 1.2063439999999999, "cable": "07BAKU1227"}, {"confidence": 1.197133, "cable": "09BAKU30"}, {"confidence": 1.0678030000000001, "cable": "08BAKU671"}, {"confidence": 1.0540240000000001, "cable": "08BAKU947"}, {"confidence": 1.01993, "cable": "08BAKU815"}]

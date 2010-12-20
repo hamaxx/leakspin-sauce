@@ -1,0 +1,1 @@
+[{"confidence": 1.5337859999999999, "cable": "08PANAMA851"}, {"confidence": 1.436242, "cable": "09PANAMA519"}, {"confidence": 1.427848, "cable": "09PANAMA550"}, {"confidence": 1.2797499999999999, "cable": "09PANAMA195"}, {"confidence": 1.23814, "cable": "09STATE69224"}, {"confidence": 1.062203, "cable": "08PANAMA820"}]

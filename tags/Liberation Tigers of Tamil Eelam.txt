@@ -1,0 +1,1 @@
+[{"confidence": 0.22827900000000001, "cable": "07COLOMBO728"}, {"confidence": 0.183145, "cable": "07COLOMBO830"}, {"confidence": 0.17471600000000001, "cable": "09COLOMBO695"}, {"confidence": 0.17035800000000001, "cable": "10COLOMBO50"}, {"confidence": 0.018489999999999999, "cable": "05LIMA2158"}]
