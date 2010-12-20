@@ -1,1 +1,1 @@
-[{"confidence": 1.2596400000000001, "cable": "08BEIJING125"}, {"confidence": 1.020332, "cable": "08RANGOON44"}]
+[{"confidence": 1.8752940000000002, "cable": "09RANGOON539"}, {"confidence": 1.7660100000000001, "cable": "09BEIJING2868"}, {"confidence": 1.7142889999999997, "cable": "09RANGOON536"}, {"confidence": 1.6199530000000002, "cable": "09RANGOON205"}, {"confidence": 1.5885919999999998, "cable": "04NEWDELHI6983"}, {"confidence": 1.2596400000000001, "cable": "08BEIJING125"}, {"confidence": 1.020332, "cable": "08RANGOON44"}]

@@ -1,1 +1,1 @@
-[{"confidence": 0.021555000000000001, "cable": "89PANAMA8545"}]
+[{"confidence": 0.054063, "cable": "10PANAMA1"}, {"confidence": 0.046868, "cable": "09PANAMA195"}, {"confidence": 0.039801000000000003, "cable": "09STATE69224"}, {"confidence": 0.038475000000000002, "cable": "08PANAMA851"}, {"confidence": 0.026102, "cable": "09PANAMA519"}, {"confidence": 0.025439, "cable": "09PANAMA550"}, {"confidence": 0.021555000000000001, "cable": "89PANAMA8545"}]

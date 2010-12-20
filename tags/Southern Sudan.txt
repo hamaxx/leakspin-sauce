@@ -1,1 +1,1 @@
-[{"confidence": 0.170982, "cable": "10NAIROBI181"}, {"confidence": 0.14812500000000001, "cable": "08NAIROBI2290"}, {"confidence": 0.14671500000000001, "cable": "09NAIROBI2497"}, {"confidence": 0.11988799999999999, "cable": "09KHARTOUM881"}]
+[{"confidence": 0.18355199999999999, "cable": "09STATE122115"}, {"confidence": 0.170982, "cable": "10NAIROBI181"}, {"confidence": 0.14812500000000001, "cable": "08NAIROBI2290"}, {"confidence": 0.14671500000000001, "cable": "09NAIROBI2497"}, {"confidence": 0.11988799999999999, "cable": "09KHARTOUM881"}]

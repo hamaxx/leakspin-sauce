@@ -1,1 +1,1 @@
-[{"confidence": 0.13442899999999999, "cable": "09CAIRO1349"}, {"confidence": 0.087820999999999996, "cable": "09CAIRO874"}]
+[{"confidence": 0.13442899999999999, "cable": "09CAIRO1349"}, {"confidence": 0.087820999999999996, "cable": "09CAIRO874"}, {"confidence": 0.063010999999999998, "cable": "07CAIRO1417"}, {"confidence": 0.047026999999999999, "cable": "08CAIRO2091"}, {"confidence": 0.038665999999999999, "cable": "05CAIRO7782"}]
