@@ -1,1 +1,1 @@
-[{"confidence": 0.27918199999999999, "cable": "09GUATEMALA917"}, {"confidence": 0.025052999999999999, "cable": "09LIMA345"}]
+[{"confidence": 0.30329099999999998, "cable": "05GUATEMALA659"}, {"confidence": 0.27918199999999999, "cable": "09GUATEMALA917"}, {"confidence": 0.25423499999999999, "cable": "08GUATEMALA867"}, {"confidence": 0.091783000000000003, "cable": "06THEHAGUE2047"}, {"confidence": 0.091063000000000005, "cable": "06REYKJAVIK141"}, {"confidence": 0.025052999999999999, "cable": "09LIMA345"}]

@@ -1,1 +1,1 @@
-[{"confidence": 1.304217, "cable": "09BUENOSAIRES1026"}, {"confidence": 1.0726389999999999, "cable": "09BUENOSAIRES853"}, {"confidence": 1.0080039999999999, "cable": "09BUENOSAIRES827"}]
+[{"confidence": 1.304217, "cable": "09BUENOSAIRES1026"}, {"confidence": 1.2543800000000001, "cable": "09BUENOSAIRES988"}, {"confidence": 1.0726389999999999, "cable": "09BUENOSAIRES853"}, {"confidence": 1.0080039999999999, "cable": "09BUENOSAIRES827"}, {"confidence": 1.0032479999999999, "cable": "09BUENOSAIRES1008"}]

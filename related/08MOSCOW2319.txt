@@ -1,1 +1,1 @@
-[{"confidence": 1.134852, "cable": "08MOSCOW2545"}, {"confidence": 1.0744429999999998, "cable": "08MOSCOW2701"}, {"confidence": 1.0523909999999999, "cable": "08STATE90980"}, {"confidence": 1.0366150000000001, "cable": "08TBILISI1343"}]
+[{"confidence": 1.264864, "cable": "06MOSCOW7863"}, {"confidence": 1.134852, "cable": "08MOSCOW2545"}, {"confidence": 1.129748, "cable": "08STATE114173"}, {"confidence": 1.0744429999999998, "cable": "08MOSCOW2701"}, {"confidence": 1.0523909999999999, "cable": "08STATE90980"}, {"confidence": 1.0366150000000001, "cable": "08TBILISI1343"}]

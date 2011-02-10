@@ -1,1 +1,1 @@
-[{"confidence": 1.1437299999999999, "cable": "09ANKARA321"}, {"confidence": 1.1226829999999999, "cable": "09ANKARA1654"}, {"confidence": 1.051034, "cable": "10STATE16932"}]
+[{"confidence": 1.1497360000000001, "cable": "09ISTANBUL352"}, {"confidence": 1.1437299999999999, "cable": "09ANKARA321"}, {"confidence": 1.1226829999999999, "cable": "09ANKARA1654"}, {"confidence": 1.115642, "cable": "09ANKARA1084"}, {"confidence": 1.051034, "cable": "10STATE16932"}]

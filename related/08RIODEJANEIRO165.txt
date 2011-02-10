@@ -1,1 +1,1 @@
-[{"confidence": 1.3148850000000001, "cable": "09RIODEJANEIRO14"}, {"confidence": 1.242054, "cable": "09RIODEJANEIRO285"}, {"confidence": 1.0607, "cable": "08RIODEJANEIRO91"}]
+[{"confidence": 1.3148850000000001, "cable": "09RIODEJANEIRO14"}, {"confidence": 1.248097, "cable": "08SAOPAULO335"}, {"confidence": 1.242054, "cable": "09RIODEJANEIRO285"}, {"confidence": 1.0607, "cable": "08RIODEJANEIRO91"}, {"confidence": 1.030545, "cable": "08RIODEJANEIRO205"}]

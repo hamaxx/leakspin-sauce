@@ -1,1 +1,1 @@
-[{"confidence": 0.347001, "cable": "09BISHKEK1065"}, {"confidence": 0.266152, "cable": "08BISHKEK1095"}, {"confidence": 0.196849, "cable": "09BISHKEK135"}]
+[{"confidence": 0.347001, "cable": "09BISHKEK1065"}, {"confidence": 0.266152, "cable": "08BISHKEK1095"}, {"confidence": 0.196849, "cable": "09BISHKEK135"}, {"confidence": 0.110482, "cable": "08SECTION01GF02BISHIEK21"}, {"confidence": 0.098644999999999997, "cable": "07TASHKENT2171"}, {"confidence": 0.089996999999999994, "cable": "07TASHKENT2081"}]

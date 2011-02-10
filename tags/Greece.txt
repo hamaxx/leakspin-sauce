@@ -1,1 +1,1 @@
-[{"confidence": 0.023365, "cable": "72TEHRAN5055"}]
+[{"confidence": 0.31204399999999999, "cable": "10ATHENS59"}, {"confidence": 0.242364, "cable": "10ATHENS57"}, {"confidence": 0.13878099999999999, "cable": "08TRIPOLI526"}, {"confidence": 0.105833, "cable": "09ATHENS1685"}, {"confidence": 0.088009000000000004, "cable": "08REYKJAVIK46"}, {"confidence": 0.023365, "cable": "72TEHRAN5055"}]

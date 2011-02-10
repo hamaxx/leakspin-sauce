@@ -1,1 +1,1 @@
-[{"confidence": 1.0757949999999998, "cable": "10MUSCAT71"}, {"confidence": 1.0321099999999999, "cable": "08MUSCAT565"}]
+[{"confidence": 1.0757949999999998, "cable": "10MUSCAT71"}, {"confidence": 1.0321099999999999, "cable": "08MUSCAT565"}, {"confidence": 1.0145409999999999, "cable": "07TELAVIV3385"}]

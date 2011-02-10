@@ -1,1 +1,1 @@
-[{"confidence": 0.099684999999999996, "cable": "08PARIS1703"}, {"confidence": 0.095893999999999993, "cable": "09MOSCOW1488"}, {"confidence": 0.089929999999999996, "cable": "10MOSCOW392"}, {"confidence": 0.089640999999999998, "cable": "07TELAVIV64"}]
+[{"confidence": 0.11101999999999999, "cable": "10TELAVIV359"}, {"confidence": 0.099684999999999996, "cable": "08PARIS1703"}, {"confidence": 0.095893999999999993, "cable": "09MOSCOW1488"}, {"confidence": 0.089929999999999996, "cable": "10MOSCOW392"}, {"confidence": 0.089640999999999998, "cable": "07TELAVIV64"}]

@@ -1,1 +1,1 @@
-[{"confidence": 1.1856469999999999, "cable": "06LAPAZ3400"}, {"confidence": 1.0502309999999999, "cable": "09LAPAZ1784"}, {"confidence": 1.0479530000000001, "cable": "07LAPAZ383"}, {"confidence": 1.044403, "cable": "07STATE156011"}]
+[{"confidence": 1.1856469999999999, "cable": "06LAPAZ3400"}, {"confidence": 1.069118, "cable": "10LAPAZ35"}, {"confidence": 1.0502309999999999, "cable": "09LAPAZ1784"}, {"confidence": 1.0479530000000001, "cable": "07LAPAZ383"}, {"confidence": 1.044403, "cable": "07STATE156011"}]

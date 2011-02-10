@@ -1,1 +1,1 @@
-[{"confidence": 1.009091, "cable": "05DUSHANBE1812"}, {"confidence": 1.0045519999999999, "cable": "10DUSHANBE173"}]
+[{"confidence": 1.2450209999999999, "cable": "05DUSHANBE1702"}, {"confidence": 1.2141470000000001, "cable": "09DUSHANBE1433"}, {"confidence": 1.0773079999999999, "cable": "05DUSHANBE1870"}, {"confidence": 1.009091, "cable": "05DUSHANBE1812"}, {"confidence": 1.0045519999999999, "cable": "10DUSHANBE173"}]

@@ -1,1 +1,1 @@
-[{"confidence": 0.082819000000000004, "cable": "04OTTAWA3115"}, {"confidence": 0.066471000000000002, "cable": "08OTTAWA1258"}]
+[{"confidence": 0.103198, "cable": "09OTTAWA627"}, {"confidence": 0.082819000000000004, "cable": "04OTTAWA3115"}, {"confidence": 0.068222000000000005, "cable": "09TRIPOLI770"}, {"confidence": 0.068184999999999996, "cable": "09OTTAWA639"}, {"confidence": 0.066471000000000002, "cable": "08OTTAWA1258"}]

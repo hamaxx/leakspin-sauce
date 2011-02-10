@@ -1,1 +1,1 @@
-[{"confidence": 1.2833049999999999, "cable": "10MEXICO83"}, {"confidence": 1.2365599999999999, "cable": "09MEXICO2882"}, {"confidence": 1.0706410000000002, "cable": "09MEXICO193"}]
+[{"confidence": 1.3648309999999999, "cable": "09MEXICO1020"}, {"confidence": 1.2833049999999999, "cable": "10MEXICO83"}, {"confidence": 1.2365599999999999, "cable": "09MEXICO2882"}, {"confidence": 1.0706410000000002, "cable": "09MEXICO193"}, {"confidence": 1.0042800000000001, "cable": "09MEXICO3077"}]
