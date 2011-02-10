@@ -1,0 +1,1 @@
+[{"confidence": 1.4936290000000001, "cable": "06MINSK641"}, {"confidence": 1.2855429999999999, "cable": "07MINSK915"}, {"confidence": 1.154881, "cable": "08MINSK85"}, {"confidence": 1.085221, "cable": "06MINSK311"}, {"confidence": 1.0561850000000002, "cable": "07MINSK620"}, {"confidence": 1.0019750000000001, "cable": "09TALLINN317"}]

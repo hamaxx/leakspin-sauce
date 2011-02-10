@@ -1,0 +1,1 @@
+[{"confidence": 1.322425, "cable": "08BEIJING3039"}, {"confidence": 1.304284, "cable": "08STATE83144"}, {"confidence": 1.155661, "cable": "08THEHAGUE553"}, {"confidence": 1.0417860000000001, "cable": "10KUWAIT161"}, {"confidence": 1.037164, "cable": "10BERLIN81"}, {"confidence": 1.0143580000000001, "cable": "09STATE100153"}]

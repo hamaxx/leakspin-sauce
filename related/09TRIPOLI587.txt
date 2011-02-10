@@ -1,0 +1,1 @@
+[{"confidence": 1.0712730000000001, "cable": "09TRIPOLI239"}, {"confidence": 1.0151599999999998, "cable": "09TRIPOLI242"}]
