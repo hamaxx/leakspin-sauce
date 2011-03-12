@@ -4,6 +4,12 @@ body {
 	font-family: Helvetica, Arial;
 }
 
+h1 {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
 a {
 	color: #337733;
 }
